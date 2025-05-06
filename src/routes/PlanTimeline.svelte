@@ -13,10 +13,6 @@
 	onMount(() => {
 		interval = setInterval(() => {
 			let planStage = getPlanStage(plan);
-
-			if (planStage.index !== stageInfo.index && window.navigator.vibrate !== undefined) {
-				window.navigator.vibrate(100);
-			}
 			stageInfo = planStage;
 		}, 500);
 	});
